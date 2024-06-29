@@ -5,7 +5,6 @@ class Settings
         data_source_type = type(input)
         data_source_type.build(input)
       end
-      class << self; alias :! :call; end # TODO: Remove deprecated actuator [Kelsey, Thu Oct 08 2015]
 
       def self.type(input=nil)
         return Settings::DataSource::Hash if input.is_a?(::Hash)
